@@ -4,33 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">    
 </head>
 <body>
     <div class="calculator-grid">
         <div class="output">
-            <div class="previous-operand">123+12341234125</div>
-            <div class="current-operand">4561111111111111111111111111111111</div>
+            <div data-previous-operand class="previous-operand"></div>
+            <div data-current-operand class="current-operand"></div>
         </div>
-        <button class="span-two">AC</button>
-        <button>DEL</button>
-        <button>/</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>*</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>+</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>-</button>
-        <button>.</button>
-        <button>0</button>
-        <button class="span-two">=</button>
+        <!-- 스타일과 클래스를 자바스크립트와 혼합하고 싶지 않기 때문에 클래스 대신 데이터 속성 사용 -->
+        <!-- 클래스 대신 데이터 속성을 사용하는 이유는 JavaScript에서 HTML의 어떤 부분이 사용되고 있고
+             실제 CSS에서 어떤 부분이 사용되고 있는지 쉽게 알 수 있기 때문입니다. -->
+        <button data-all-clear class="span-two">AC</button>
+        <button data-delete>DEL</button>
+        <button data-operation>&divide;</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>&times;</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>+</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation>-</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+        <button data-equals class="span-two">=</button>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
